@@ -7,8 +7,10 @@ object SparkExample extends Serializable {
 
   def main(args: Array[String]): Unit = {
 
+    
     val conf = new SparkConf().setAppName("spark linkedin-data-analysis").setMaster("local")
     val sc = new SparkContext(conf)
+    
     val dataset = sc.textFile("hdfs://localhost:9000/Linkedin/myConnections.csv")
     val header = dataset.first()
 
@@ -82,8 +84,8 @@ object SparkExample extends Serializable {
 
        Person(Ahmed,Naseem,ahmed_naseem1@outlook.com,Concept Creator,Creative Designer,20 Mar 2021)
        Person(Muhammad,Jamal,muhammadjammi18@gmail.com,Upwork,Frontend Web Developer,15 Feb 2021)
-       Person(Mina,Toma,minatoma1999@gmail.com,Google,Software Engineer,10 Feb 2021)
-       Person(Abdalrhim,mostafa,abdalrhim122mostafa@gmail.com,PayME ,Mean Stack Developor,10 Feb 2021)
+       .........................................................................................
+       .........................................................................................
 
     */
 
@@ -123,6 +125,7 @@ object SparkExample extends Serializable {
       (Mohamed Taha,07 Nov 2020)
       (hossam elden abdelhamed,07 Nov 2020)
       (Mahmoud Khalil,07 Nov 2020)
+      ............................
 
      */
 
